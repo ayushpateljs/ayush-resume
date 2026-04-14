@@ -1,0 +1,16 @@
+import { Component, signal } from '@angular/core';
+import { RouterOutlet } from '@angular/router';
+import { Navbar } from "./shared/navbar/navbar";
+import { ThemeService } from './core/service/theme-service';
+import { Footer } from './shared/footer/footer';
+
+@Component({
+  selector: 'app-root',
+  imports: [RouterOutlet, Navbar,Footer],
+  templateUrl: './app.html',
+  styleUrl: './app.css'
+})
+export class App {
+  protected readonly title = signal('ayush-portfolio');
+    constructor(private theme: ThemeService) {}
+}

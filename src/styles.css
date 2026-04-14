@@ -1,0 +1,45 @@
+body {
+  background: #0a0a0f;
+  color: white;
+}
+
+.btn-glow {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  border: none;
+  color: white;
+  border-radius: 30px;
+}
+
+.section {
+  padding: 80px 0;
+}
+
+/* DARK THEME (default) */
+body[data-theme='dark'] {
+  background: #0a0a0f;
+  color: white;
+}
+
+/* LIGHT THEME */
+body[data-theme='light'] {
+  background: #ffffff;
+  color: #111;
+}
+
+/* Cards */
+body[data-theme='dark'] .project-card {
+  background: #111;
+}
+
+body[data-theme='light'] .project-card {
+  background: #f5f5f5;
+}
+
+/* Navbar */
+body[data-theme='light'] .navbar {
+  background: #ffffff !important;
+}
+
+body[data-theme='light'] .nav-link {
+  color: black !important;
+}

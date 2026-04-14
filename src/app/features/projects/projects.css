@@ -1,0 +1,9 @@
+.project-card {
+      background: #111;
+      padding: 20px;
+      border-radius: 12px;
+      transition: 0.3s;
+    }
+    .project-card:hover {
+      transform: translateY(-10px);
+    }

@@ -1,0 +1,165 @@
+/* NAVBAR */
+.custom-nav {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 95%;
+  max-width: 1200px;
+
+  background: rgba(10, 10, 20, 0.7);
+  backdrop-filter: blur(12px);
+
+  border-radius: 50px;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* LOGO */
+.logo {
+  font-weight: bold;
+  color: #ec4899;
+}
+.logo span {
+  color: white;
+}
+
+/* DESKTOP MENU */
+.desktop-menu {
+  list-style: none;
+}
+
+.desktop-menu .nav-link {
+  color: #ccc;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.desktop-menu .nav-link:hover {
+  color: white;
+}
+
+/* THEME BUTTON */
+.theme-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  color: white;
+}
+
+/* HIRE BUTTON */
+.hire-btn {
+  background: linear-gradient(45deg, #a855f7, #ec4899);
+  border: none;
+  color: white;
+  border-radius: 30px;
+  padding: 6px 18px;
+}
+
+/* MENU BUTTON */
+.menu-btn {
+  width: 40px;
+  height: 40px;
+  background: hsla(0, 0%, 100%, 0.08);
+  background-color:   #ec4899;
+  border-radius: 50%;
+  border: none;
+  position: relative;
+}
+
+/* HAMBURGER */
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  content: '';
+  position: absolute;
+  width: 18px;
+  height: 2px;
+  background: white;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+
+.menu-btn span {
+  top: 50%;
+}
+.menu-btn span::before {
+  top: -6px;
+}
+.menu-btn span::after {
+  top: 6px;
+}
+
+/* ANIMATION */
+.menu-btn span.open {
+  background: transparent;
+}
+.menu-btn span.open::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+.menu-btn span.open::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* OVERLAY */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 900;
+}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  width: 100%;
+  background: #111;
+  padding: 20px;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: 0.3s;
+  z-index: 1001;
+ 
+}
+
+/* SHOW MENU */
+.mobile-menu.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* LINKS */
+.mobile-menu a {
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+/* RESPONSIVE */
+@media (min-width: 992px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .mobile-menu {
+    display: none !important;
+  }
+}

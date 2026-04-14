@@ -1,0 +1,15 @@
+<div class="container mt-5 pt-5">
+    <h2 class="text-center mb-5">Projects</h2>
+
+    <div class="row">
+      @for (p of projects; track p.name) {
+        <div class="col-lg-4 col-md-6 mb-4">
+          <div class="project-card">
+            <h5>{{ p.name }}</h5>
+            <p>{{ p.desc }}</p>
+            <button class="btn btn-glow btn-sm">View</button>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
