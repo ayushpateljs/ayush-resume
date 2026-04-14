@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -8,8 +8,15 @@ import { Component } from '@angular/core';
   styleUrl: './projects.css',
 })
 export class Projects {
-   projects = [
-    { name: 'Portfolio', desc: 'Modern Angular UI' },
-    { name: 'Dashboard', desc: 'Admin analytics panel' }
-  ];
+  //  projects = [
+  //   { name: 'Portfolio', desc: 'Modern Angular UI' },
+  //   { name: 'Dashboard', desc: 'Admin analytics panel' }
+  // ];
+
+   categories = signal(['All', 'Next.js', 'React Native', 'AI', 'Full Stack', 'Web Dev']);
+  activeCategory = signal('All');
+
+  setCategory(cat: string) {
+    this.activeCategory.set(cat);
+  }
 }

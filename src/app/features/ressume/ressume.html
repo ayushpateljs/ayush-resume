@@ -1,0 +1,234 @@
+<main class="portfolio-page py-5">
+    <div class="container container-narrow">
+
+        <!-- SECTION 1: RESUME HEADER (Screenshot 1) -->
+        <header class="text-center mb-5 pb-lg-4">
+            <p class="text-uppercase small-label mb-2">Curriculum Vitae</p>
+            <h1 class="main-title mb-4">
+                <span class="d-block text-white">My</span>
+                <span class="d-block gradient-text">Resume</span>
+            </h1>
+            <p class="text-secondary small mx-auto max-w-500 mb-5">
+                4+ years of building production-grade software. Download the PDF or explore below.
+            </p>
+
+            <!-- Glassmorphism Contact Bar -->
+            <div class="glass-bar d-flex flex-wrap justify-content-between align-items-center p-3 mb-5">
+                <div class="d-flex flex-wrap gap-4 text-secondary small ps-md-3">
+                    <span class="contact-item"><i class="bi bi-envelope me-2"></i>ayushpatel.ismp@gmail.com</span>
+                    <span class="contact-item"><i class="bi bi-geo-alt me-2"></i>New Delhi, India</span>
+                    <span class="contact-item"><i
+                            class="bi bi-link-45deg me-2"></i>https://ayush-resume-seven.vercel.app/</span>
+                </div>
+                <button class="btn btn-gradient rounded-pill px-4 mt-3 mt-md-0" (click)="downloadResume()">
+                    <i class="bi bi-cloud-arrow-down me-2"></i> Download PDF
+                </button>
+            </div>
+
+            <!-- Professional Summary Card -->
+            <div class="bento-card text-start p-4 p-md-5 mb-5 shadow-glow">
+                <div class="row align-items-center">
+                    <div class="col-lg-1 text-center text-lg-start mb-3 mb-lg-0">
+                        <div class="icon-box purple-glow"><i class="bi bi-person-vcard"></i></div>
+                    </div>
+                    <div class="col-lg-11 ps-lg-4">
+                        <h4 class="text-white fw-bold mb-3">Professional Summary</h4>
+                        <p class="text-secondary leading-relaxed mb-0">
+                            Senior Software Developer with 4+ years building high-performance web applications at
+                            massive scale. Currently leading frontend at <strong>Chetu Inc</strong>, driving
+                            platforms that serve 6M+ unique users and 20M+ monthly page views. Expertise in React,
+                            Next.js, Angular, TypeScript, and Node.js.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- SECTION 2: WORK EXPERIENCE (Screenshot 2) -->
+        <section class="experience-section mt-5">
+            <div class="d-flex align-items-center mb-5">
+                <div class="icon-box orange-glow me-3"><i class="bi bi-briefcase"></i></div>
+                <h2 class="text-white fw-bold mb-0">Work Experience</h2>
+            </div>
+
+            <div class="row g-4">
+                @for (exp of experiences(); track exp.company) {
+                <div class="col-12">
+                    <div class="bento-card p-4 p-md-5">
+                        <div class="row align-items-start mb-4">
+                            <div class="col-md-8">
+                                <h3 class="text-white fw-bold mb-1">{{ exp.role }}</h3>
+                                <h5 class="text-purple fw-semibold">{{ exp.company }}</h5>
+                            </div>
+                            <div class="col-md-4 text-md-end">
+                                <span class="text-secondary small d-block">{{ exp.period }}</span>
+                                <span class="text-secondary small opacity-50">{{ exp.location }}</span>
+                            </div>
+                        </div>
+
+                        <ul class="text-secondary opacity-75 mb-4 custom-list">
+                            @for (bullet of exp.bullets; track bullet) {
+                            <li class="mb-2">{{ bullet }}</li>
+                            }
+                        </ul>
+
+                        <div class="d-flex flex-wrap gap-2 mt-4">
+                            @for (tag of exp.tags; track tag) {
+                            <span class="tag-pill">{{ tag }}</span>
+                            }
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </section>
+
+        <!-- SECTION 3: EDUCATION (Screenshot 3) -->
+        <section class="education-section mt-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="icon-box purple-glow me-3"><i class="bi bi-mortarboard"></i></div>
+                <h2 class="text-white fw-bold mb-0">Education</h2>
+            </div>
+
+            <div class="bento-card p-4 p-md-5">
+                <div class="row align-items-start">
+                    <div class="col-md-8">
+                        <h4 class="text-white fw-bold mb-1">Master of Computer Application (MCA)</h4>
+                        <h6 class="text-purple fw-semibold">TIT College </h6>
+                    </div>
+                    <div class="col-md-4 text-md-end">
+                        <span class="text-secondary small">2017 - 2019 • Bhopal, India</span>
+                    </div>
+                </div>
+                <p class="text-secondary small mt-3 opacity-75 mb-0">
+                    Post Graduate Aug 2019. Core coursework in data structures, algorithms, web technologies, database
+                    management, and software engineering principles.
+                </p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: TECHNICAL SKILLS (Screenshot 3) -->
+        <section class="skills-section mt-5">
+            <div class="d-flex align-items-center mb-4">
+                <div class="icon-box orange-glow me-3"><i class="bi bi-cpu"></i></div>
+                <h2 class="text-white fw-bold mb-0">Technical Skills</h2>
+            </div>
+
+            <div class="row g-4">
+                <!-- Frontend -->
+                <div class="col-md-6">
+                    <div class="bento-card p-4 h-100">
+                        <h6 class="text-white fw-bold mb-3 uppercase tracking-wider small">Frontend</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tag-pill">React 19</span><span class="tag-pill">Next.js 15</span>
+                            <span class="tag-pill">Angular</span><span class="tag-pill">TypeScript</span>
+                            <span class="tag-pill">Tailwind CSS</span><span class="tag-pill">jQuery</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="col-md-6">
+                    <div class="bento-card p-4 h-100">
+                        <h6 class="text-white fw-bold mb-3 uppercase tracking-wider small">Backend</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tag-pill">Node.js</span><span class="tag-pill">Express</span>
+                            <span class="tag-pill">Firebase</span><span class="tag-pill">REST APIs</span>
+                            <span class="tag-pill">SSR/ISR</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Performance -->
+                <div class="col-md-6">
+                    <div class="bento-card p-4 h-100">
+                        <h6 class="text-white fw-bold mb-3 uppercase tracking-wider small">Performance</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tag-pill">Core Web Vitals</span><span class="tag-pill">Webpack</span>
+                            <span class="tag-pill">Vite</span><span class="tag-pill">Lazy Loading</span>
+                            <span class="tag-pill">Code Splitting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- DevOps & AI -->
+                <div class="col-md-6">
+                    <div class="bento-card p-4 h-100">
+                        <h6 class="text-white fw-bold mb-3 uppercase tracking-wider small">DevOps & AI</h6>
+                        <div class="d-flex flex-wrap gap-2">
+                            <span class="tag-pill">AWS</span><span class="tag-pill">Docker</span>
+                            <span class="tag-pill">Git/GitHub</span><span class="tag-pill">OpenAI API</span>
+                            <span class="tag-pill">LLM Integration</span><span class="tag-pill">Prompt
+                                Engineering</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: CERTIFICATIONS & STATS (New Image) -->
+        <section class="cert-stats-section mt-5">
+
+            <!-- Certifications Header -->
+            <div class="d-flex align-items-center mb-4">
+                <div class="icon-box purple-glow me-3"><i class="bi bi-patch-check"></i></div>
+                <h2 class="text-white fw-bold mb-0">Certifications</h2>
+            </div>
+
+            <!-- Top Row: Certifications -->
+            <div class="row g-4 mb-4">
+                <div class="col-md-4">
+                    <div class="bento-card cert-card p-4 h-100 text-center">
+                        <i class="bi bi-lightning-charge text-warning mb-3 display-6"></i>
+                        <h6 class="text-white fw-bold mb-1">Core Web Vitals</h6>
+                        <p class="text-secondary small mb-0">Google · Ongoing</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bento-card cert-card p-4 h-100 text-center">
+                        <i class="bi bi-robot text-info mb-3 display-6"></i>
+                        <h6 class="text-white fw-bold mb-1">AI & LLM Integration</h6>
+                        <p class="text-secondary small mb-0">OpenAI · Practical</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="bento-card cert-card p-4 h-100 text-center">
+                        <i class="bi bi-cloud-check text-primary mb-3 display-6"></i>
+                        <h6 class="text-white fw-bold mb-1">AWS Cloud</h6>
+                        <p class="text-secondary small mb-0">Amazon Web Services</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Row: Statistics -->
+            <div class="row g-3">
+                <div class="col-6 col-md-3">
+                    <div class="bento-card p-3 p-md-4 h-100 text-center">
+                        <h3 class="stat-num text-purple mb-1">4+</h3>
+                        <p class="text-secondary small mb-0 uppercase tracking-widest">Years Exp</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bento-card p-3 p-md-4 h-100 text-center">
+                        <h3 class="stat-num text-purple mb-1">20+</h3>
+                        <p class="text-secondary small mb-0 uppercase tracking-widest">Projects</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bento-card p-3 p-md-4 h-100 text-center">
+                        <h3 class="stat-num text-orange mb-1">10M+</h3>
+                        <p class="text-secondary small mb-0 uppercase tracking-widest">Page Views</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="bento-card p-3 p-md-4 h-100 text-center">
+                        <h3 class="stat-num text-orange mb-1">6M+</h3>
+                        <p class="text-secondary small mb-0 uppercase tracking-widest">Unique Users</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+    </div>
+</main>
