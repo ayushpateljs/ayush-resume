@@ -13,15 +13,22 @@
   border-radius: 50px;
   padding: 10px 20px;
   z-index: 1000;
+
+    list-style: none !important;
+  text-decoration: none !important;
 }
 
 /* LOGO */
 .logo {
-  font-weight: bold;
+   font-weight: bold;
   color: #ec4899;
+  text-decoration: none; /* Remove any default underlines */
+  display: flex;
+  align-items: center;
 }
 .logo span {
   color: white;
+  margin-left: 1px; 
 }
 
 /* DESKTOP MENU */
@@ -163,3 +170,5 @@
     display: none !important;
   }
 }
+
+

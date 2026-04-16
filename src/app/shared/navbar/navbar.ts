@@ -18,14 +18,6 @@ export class Navbar {
     this.theme.toggleTheme();
   }
 
-//   // Add this to your navbar.component.ts
-// closeMenu() {
-//   const menu = document.getElementById('navMenu');
-//   if (menu && menu.classList.contains('show')) {
-//     menu.classList.remove('show');
-//   }
-// }
-
 toggleMenu() {
   console.log("nnn");
   
