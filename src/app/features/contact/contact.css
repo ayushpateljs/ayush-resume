@@ -1,0 +1,91 @@
+/* BACKGROUND */
+.contact-hero {
+  padding: 120px 0;
+  background: radial-gradient(circle at left, #1a0033, #000);
+  color: white;
+}
+
+/* TAG */
+.tag {
+  color: #a855f7;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+/* TITLE */
+.hero-title {
+  font-size: 64px;
+  font-weight: 800;
+  line-height: 1.1;
+}
+
+.hero-title span {
+  background: linear-gradient(45deg, #a855f7, #ec4899);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* SUBTEXT */
+.hero-sub {
+  max-width: 600px;
+  margin: auto;
+  color: #aaa;
+  font-size: 14px;
+}
+
+/* INFO CARDS */
+.info-card {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  padding: 12px;
+  border-radius: 12px;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+.green { background: #22c55e; }
+.blue { background: #3b82f6; }
+.purple { background: #a855f7; }
+
+/* GLASS CARD */
+.glass-card {
+  background: rgba(255,255,255,0.05);
+  padding: 20px;
+  border-radius: 15px;
+  backdrop-filter: blur(12px);
+}
+
+/* INPUT */
+.custom-input {
+  background: rgb(75 50 90 / var(--tw-text-opacity, 1));
+  border: none;
+  color: white ;
+  padding: 10px;
+}
+
+/* BUTTON */
+.btn-gradient {
+  background: linear-gradient(45deg, #a855f7, #ec4899);
+  border: none;
+  border-radius: 30px;
+  color: white;
+  padding: 10px;
+}
+
+/* CALL CARD */
+.call-card p {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 36px;
+  }
+}

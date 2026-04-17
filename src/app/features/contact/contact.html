@@ -1,12 +1,139 @@
-<section class="section dark-section text-center mt-5 pt-5">
+<!-- <section class="section dark-section text-center mt-5 pt-5">
   <div class="container">
     <h2>Contact Me</h2>
 
-    <form class="contact-form">
-      <input class="form-control mb-2" placeholder="Name" />
-      <input class="form-control mb-2" placeholder="Email" />
-      <textarea class="form-control mb-2" placeholder="Message"></textarea>
-      <button class="btn btn-glow">Send</button>
-    </form>
+    <div class="row justify-content-center">
+      <div class="col-lg-6 col-md-8 col-12"> 
+
+        <form class="contact-form">
+          <input class="form-control mb-2" placeholder="Name" />
+          <input class="form-control mb-2" placeholder="Email" />
+          <textarea class="form-control mb-2" placeholder="Message"></textarea>
+          <button class="btn btn-glow w-100">Send</button>
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</section> -->
+<section class="contact-hero">
+  <div class="container text-center">
+
+    <!-- TOP LABEL -->
+    <p class="tag">GET IN TOUCH</p>
+
+    <!-- TITLE -->
+    <h1 class="hero-title">
+      Let’s Work <br />
+      <span>Together</span>
+    </h1>
+
+    <p class="hero-sub">
+      Have a project in mind or just want to chat? I'd love to hear from you —
+      I usually reply within 24 hours.
+    </p>
+
+    <!-- INFO CARDS -->
+    <div class="row justify-content-center mt-4 g-3">
+
+      <div class="col-lg-3 col-md-4 col-12" *ngFor="let item of infoCards">
+        <div class="info-card">
+          <span class="dot" [ngClass]="item.color"></span>
+          <div>
+            <h6>{{item.title}}</h6>
+            <p>{{item.desc}}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="row mt-5 g-4 justify-content-center">
+
+      <!-- LEFT FORM -->
+      <div class="col-lg-6 col-12">
+        <div class="glass-card form-card">
+
+          <h5 class="mb-3">Send a Message</h5>
+
+          <!-- <form>
+            <div class="row g-2">
+              <div class="col-md-6">
+                <input class="form-control custom-input" placeholder="John Doe" />
+              </div>
+              <div class="col-md-6">
+                <input class="form-control custom-input" placeholder="john@email.com" />
+              </div>
+            </div>
+
+            <input class="form-control custom-input mt-2" placeholder="Company / Organisation" />
+
+            <select class="form-control custom-input mt-2">
+              <option>Freelance / Contract Project</option>
+              <option>Full-time Opportunity</option>
+              <option>Technical Consultation</option>
+              <option>Open Source Collaboration</option>
+              <option>Speaking / Workshop</option>
+              <option>General Enquiry</option>
+            </select>
+
+            <input class="form-control custom-input mt-2" placeholder="Subject" />
+
+            <textarea rows="4" class="form-control custom-input mt-2"
+              placeholder="Tell me about your project, timeline, and budget…"></textarea>
+
+            <button class="btn btn-gradient w-100 mt-3">
+              Send Message →
+            </button>
+          </form> -->
+<form (ngSubmit)="sendWhatsApp()">
+
+  <input class="form-control custom-input mt-2"
+         placeholder="Name"
+         [(ngModel)]="form.name"
+         name="name" required />
+
+  <input class="form-control custom-input mt-2"
+         placeholder="Email"
+         [(ngModel)]="form.email"
+         name="email" required />
+
+  <textarea rows="4"
+            class="form-control custom-input mt-2"
+            placeholder="Message"
+            [(ngModel)]="form.message"
+            name="message"></textarea>
+
+  <button type="submit" class="btn btn-gradient w-100 mt-3">
+    Send Message →
+  </button>
+
+</form>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+      <div class="col-lg-4 col-12">
+
+        <div class="glass-card mb-3">
+          <h6>Direct Contact</h6>
+          <p>📧 ayushpateljs@gmail.com</p>
+          <p>🔗 linkedin.com/in/ayushpateljs</p>
+          <p>💻 github.com/ayushpateljs</p>
+          <p>✖ @ayushpateljs</p>
+        </div>
+
+        <div class="glass-card text-center call-card">
+          <h6>Book a 30-min Call</h6>
+          <p>Prefer to talk? Schedule a free call to discuss your project.</p>
+          <button class="btn btn-gradient">Schedule on Calendly →</button>
+        </div>
+
+      </div>
+
+    </div>
+
   </div>
 </section>
