@@ -13,7 +13,7 @@ export class Projects {
   //   { name: 'Dashboard', desc: 'Admin analytics panel' }
   // ];
 
-   categories = signal(['All', 'Next.js', 'React Native', 'AI', 'Full Stack', 'Web Dev']);
+   categories = signal(['All', 'Angular', 'Node.js', 'React.js', 'Full Stack', 'Web Dev']);
   activeCategory = signal('All');
 
   setCategory(cat: string) {

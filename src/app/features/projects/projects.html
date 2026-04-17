@@ -1,17 +1,14 @@
-  <section class="projects-section py-5">
+<section class="projects-section py-5">
   <div class="container text-center">
     <p class="text-secondary text-uppercase small ls-2">FULL Portfolio</p>
     <h1 class="display-4 fw-bold text-white mb-4">All My <span class="gradient-text">Projects</span></h1>
-   
+
     <!-- Category Filter -->
     <div class="d-flex flex-wrap justify-content-center gap-2 mb-5">
       @for (cat of categories(); track cat) {
-        <button 
-          (click)="setCategory(cat)"
-          [class.active]="activeCategory() === cat"
-          class="btn filter-btn">
-          {{cat}}
-        </button>
+      <button (click)="setCategory(cat)" [class.active]="activeCategory() === cat" class="btn filter-btn">
+        {{cat}}
+      </button>
       }
     </div>
 
@@ -31,7 +28,8 @@
             <div class="col-lg-8">
               <span class="text-secondary small">CHETU.COM</span>
               <h3 class="text-white mt-2">Web and Mobile Development Platform</h3>
-              <p class="text-secondary">Senior frontend engineering for CHETU.com — optimizing Core Web Vitals and integrating AI-powered features for high-traffic environments.</p>
+              <p class="text-secondary">Senior frontend engineering for CHETU.com — optimizing Core Web Vitals and
+                integrating AI-powered features for high-traffic environments.</p>
               <div class="d-flex flex-wrap gap-2 mt-3">
                 <span class="tag">Angular</span> <span class="tag">React</span> <span class="tag">TypeScript</span>
                 <button class="btn btn-sm btn-gradient ms-auto">Node.js <i class="bi bi-arrow-up-right"></i></button>
@@ -46,7 +44,8 @@
         <div class="project-card p-4 h-100">
           <h2 class="display-4 fw-bold text-info mb-3">69M+</h2>
           <h5>chetu.com</h5>
-          <p class="text-secondary small">Optimized performance for one of India's largest web & mobile development platforms , serving millions of unique daily users.</p>
+          <p class="text-secondary small">Optimized performance for one of India's largest web & mobile development
+            platforms , serving millions of unique daily users.</p>
           <div class="d-flex gap-2 mt-auto">
             <span class="tag">Angular</span> <span class="tag">Node.js</span>
           </div>
@@ -59,8 +58,90 @@
           <div class="code-header d-flex gap-2 mb-3">
             <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
           </div>
-          <pre class="m-0"><code class="text-secondary">social care</code></pre>
-          <p class="text-white-50 small mt-3">Infrastructure and performance engineering at scale...</p>
+          <pre class="m-0"><code class="text-secondary">Horse Riding Events</code></pre>
+          <p class="text-white-50 small mt-3">A platform dedicated to connecting horse owners, riders,
+            and enthusiasts
+            Implemented live status updates for managing horse
+            event participation, ensuring real-time updates as
+            events occur.</p>
+             <div class="d-flex gap-2 mt-auto">
+            <span class="tag">Angular</span> 
+          </div>
+          <button class="btn btn-sm btn-outline-secondary mt-3">View Code</button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card code-card p-4 h-100">
+          <div class="code-header d-flex gap-2 mb-3">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <pre class="m-0"><code class="text-secondary">Dynamic Transportation Management System</code></pre>
+          <p class="text-white-50 small mt-3">It includes modules for freight management, vehicle
+            tracking, driver management, order processing, dispatch,
+            settings, and billing
+            Enhanced a comprehensive Transportation
+            Management System that optimizes operations and
+            improves efficiency for transportation companies</p>
+             <div class="d-flex gap-2 mt-auto">
+            <span class="tag">Angular</span> 
+          </div>
+          <button class="btn btn-sm btn-outline-secondary mt-3">View Code</button>
+        </div>
+      </div>
+      
+      <div class="col-md-6">
+        <div class="project-card code-card p-4 h-100">
+          <div class="code-header d-flex gap-2 mb-3">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <pre class="m-0"><code class="text-secondary">eLearning Portal</code></pre>
+          <p class="text-white-50 small mt-3">This eLearning project aims to provide high-quality,
+            accessible, and flexible learning experiences
+            Expanded an engaging online learning platform with
+            interactive courses, video lectures, quizzes, and a
+            community forum for learners</p>
+             <div class="d-flex gap-2 mt-auto">
+            <span class="tag">Angular</span> 
+          </div>
+          <button class="btn btn-sm btn-outline-secondary mt-3">View Code</button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card code-card p-4 h-100">
+          <div class="code-header d-flex gap-2 mb-3">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <pre class="m-0"><code class="text-secondary">Social Media Platform</code></pre>
+          <p class="text-white-50 small mt-3">A unique social media platform inspired by Instagram with
+            gamified puzzle challenges
+            Developed a social media platform that allows users to
+            upload images and share them as puzzles, integrating
+            user interaction and engagement</p>
+             <div class="d-flex gap-2 mt-auto">
+             <span class="tag">Node.js</span>
+          </div>
+          <button class="btn btn-sm btn-outline-secondary mt-3">View Code</button>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="project-card code-card p-4 h-100">
+          <div class="code-header d-flex gap-2 mb-3">
+            <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+          </div>
+          <pre class="m-0"><code class="text-secondary">Healthcare Service Provider</code></pre>
+          <p class="text-white-50 small mt-3">Initiated to address the shortage of qualified healthcare
+            staff, we have expanded into a comprehensive provider of
+            experienced healthcare professionals across various
+            services.
+            Committed to delivering person-centered, high-quality
+            healthcare, we drive growth through client satisfaction
+            and strong relationships.</p>
+             <div class="d-flex gap-2 mt-auto">
+            <span class="tag">React.js</span> <span class="tag">Node.js</span>
+          </div>
           <button class="btn btn-sm btn-outline-secondary mt-3">View Code</button>
         </div>
       </div>
