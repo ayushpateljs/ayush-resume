@@ -24,6 +24,7 @@ export class Ressume {
   ]);
 
   downloadResume() {
-    window.open('Ayush-Resume.pdf', '_blank');
+    window.open('Ayush_Res.pdf', '_blank');
+    // window.open('Ayush-Resume.pdf', '_blank');
   }
 }
